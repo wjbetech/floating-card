@@ -1,0 +1,143 @@
+:root {
+
+    /* base colors */
+    --text-light: #f8fcfb;
+    --text-dark: #233142;
+
+    --grey--light: #E0E0E0;
+    --grey-medium: #A8A8A8;
+    --grey-dark: #585858;
+    --grey-v-dark: #282828;
+
+
+    /* accent colors */
+    --blue-light: #6699CC;
+    --blue-dark: #5072A7;
+    --red-light: #fd5c63;
+    --red-dark: #BA0021;
+    --green-light: #ACE1AF;
+    --green-dark: #228B22;
+    
+    /* box-shadow */
+    --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--grey-v-dark);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url("https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29mdHdhcmUlMjBkZXZlbG9wZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60");
+    background-size: cover;
+}
+
+.card {
+    position: absolute; 
+    width: 500px;
+    color: var(--text-light);
+    background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    padding: 15px 25px;
+    text-align: center;
+
+    & header {
+        cursor: all-scroll;
+        text-align: center;
+        user-select: none;
+        padding: 10px 0 20px 0;
+        margin: auto;
+        border-bottom: 2px solid var(--grey-medium);
+    }
+}
+
+li {
+    font-size: 13px;
+    list-style: none;
+    line-height: 1.75;
+}
+
+.card-body {
+    padding: 15px;
+    margin: auto;
+    border-bottom: 2px solid var(--grey-medium);
+
+    & .logo {
+        text-align: center;
+        scale: 50%;
+    }
+}
+
+h4 {
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+a:active, a:hover, a:visited {
+    color: var(--text-light);
+}
+
+p {
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+p:last-child {
+    border-bottom: none;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    margin: 0 10px;
+    background-color: var(--blue-light);
+    color: var(--grey-v-dark);
+    transition: all 0.3s ease-in-out;
+
+    & i {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding-top: 3px;
+        color: var(--grey-v-dark);
+    }
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--blue-dark);
+    color: var(--text-light);
+}
